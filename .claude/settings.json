@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '=== AUTO-LOADED PROJECT HANDOFF (read to resume Imagemaster-Translate) ==='; cat \"$CLAUDE_PROJECT_DIR/HANDOFF.md\" 2>/dev/null",
+            "shell": "bash",
+            "statusMessage": "Loading project handoff…"
+          }
+        ]
+      }
+    ]
+  }
+}

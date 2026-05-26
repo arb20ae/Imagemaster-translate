@@ -60,6 +60,10 @@ Before coding the app, apply the contract-alignment fixes flagged in each agent'
 
 ## 7. Continuity system (this file + automation)
 - This `HANDOFF.md` + git history + the `agents/*.md` notes are the durable memory.
-- The automation mechanism (auto-resume on session start, and/or a daily auto-snapshot)
-  is **pending the owner's choice** — see the chat. Until then, to refresh this file ask:
-  *"update the handoff."* To resume in a new session: *"read HANDOFF.md and continue."*
+- ✅ **Auto-resume is ACTIVE.** A `SessionStart` hook in `.claude/settings.json` auto-loads
+  this file into context at the start of every new session **opened in this project folder**
+  (`Career master/Imagemaster-translate`). No command needed.
+- To **refresh** this file's contents, ask: *"update the handoff"* (the hook loads whatever
+  this file says, so keep it current at the end of a work session).
+- Optional, not yet set up: auto-commit-on-Stop hook, and a daily `/schedule` snapshot.
+- Manual fallback (always works): *"read HANDOFF.md and continue."*

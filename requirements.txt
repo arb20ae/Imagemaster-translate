@@ -1,0 +1,3 @@
+# Phase-1 contract layer only. Component-specific deps are added by each
+# specialist as implementation begins (FastAPI, opencv-python, anthropic, etc.).
+pydantic>=2.6,<3.0
